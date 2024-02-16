@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking with Fonts CDN, Google Fonts, Adobe Fonts or other Fonts libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>More Text Styles</title>
+
+    <style>
+        /* To Use Downloaded Fonts */
+        /* @font-face {
+            font-family: my-cool-font;
+            src: url(../fonts/the-font-file.woff);
+        } */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+        }
+
+        /* Letter Spacing */
+        .letter-spacing-high {
+            letter-spacing: 5em;
+        }
+
+        .letter-spacing-low {
+            letter-spacing: -.15em;
+        }
+
+        /* Line Height */
+        .line-height-high {
+            line-height: 5em;
+            background-color: aquamarine;
+            border: 1px solid red;
+        }
+
+        /* Ellipsis */
+        .ellipsis-parent{
+            /* width: 0px; */
+        }
+        .ellipsis-child{
+            width: 400px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>More Text Styles</h3>
+
+    <p>I <em>never</em> said he stole your money</p>
+    <p>I never said <em>he</em> stole your money</p>
+    <p>I never said he stole <em>your</em> money</p>
+
+    <hr>
+    <!-- Letter Spacing -->
+    <h3>Letter Spacing</h3>
+    <p class="letter-spacing-high">Letter Spacing</p>
+    <p class="letter-spacing-low">Letter Spacing</p>
+
+    <hr>
+    <!-- Line Height -->
+    <h3>Line Height</h3>
+    <span class="line-height-high">Line Height</span>
+    <span>- the extra top and bottom space is due to <b>Line Height Property</b></span>
+
+    <hr>
+    <!-- Ellipsis -->
+    <h3>Ellipsis</h3>
+    <p class="ellipsis-parent">Ellipsis Property</p>
+    <p class="ellipsis-child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam itaque tempora deleniti quasi!</b></span>
+</body>
+
+</html>
