@@ -1,0 +1,178 @@
+* {
+    /* This selects all elements in the HTML document and applies styling to them. */
+}
+
+
+html {
+    /* This selects the <html> element and applies styling to it. */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+body {
+    /* This selects the <body> element and applies styling to it. */
+    color: black;
+}
+
+
+/* This rule will only select divs with a class of child */
+main div {
+    /* background-color: red; */
+}
+
+
+/* This rule will only select divs with a class of grand-child */
+main>div>div {
+    /* background-color: antiquewhite; */
+}
+
+/* This rule will only select the div with the class child group2 */
+/* .group1+div {
+    border: 2px solid red;
+} */
+
+/* This rule will only select the div with the class child group3 */
+/* .group1+div+div {
+    border: 2px solid green;
+    background-color: aqua !important;
+    font-size: 24px;
+} */
+
+/* This rule will select all of .group1's siblings - in this case the 2nd and 3rd .child divs */
+.group1~div {
+    background-color: blueviolet;
+}
+
+
+
+/*  */
+.link-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-group>a {
+    width: fit-content;
+    margin: 10px 0px;
+}
+
+
+/* This rule will apply to all links */
+a {
+    text-decoration: underline;
+}
+
+/* This will apply to unvisited links */
+a:link {
+    color: blue;
+}
+
+/* And you guessed it, this applies to all links the user has clicked on */
+a:visited {
+    color: purple;
+}
+
+/*  */
+
+/* ::selection allows you to change the highlighting when a user selects text on the page. */
+::selection {
+    background: yellow;
+}
+
+/* ::marker allows you to customize the styling of your <li> elements’ bullets or numbers.  */
+.myList::marker {
+    color: red;
+}
+
+
+.myList:nth-child(5) {
+    /* Selects the 5th element with class myList */
+    color: red;
+}
+
+.myList:nth-child(3n) {
+    /* Selects every 3rd element with class myList */
+    background-color: chartreuse;
+}
+
+.myList:nth-child(3n + 3) {
+    /* Selects every 3rd element with class myList, beginning with the 3rd */
+    font-weight: 900;
+}
+
+.myList:nth-child(even) {
+    /* Selects every even element with class myList */
+    font-size: 18px;
+}
+
+
+/*  */
+.emojify::before {
+    content: '😎  🤓';
+}
+
+.emojify::after {
+    content: '🤓  😎';
+}
+
+
+
+/*  */
+
+
+[src] {
+    /* This will target any element that has a src attribute. */
+}
+
+img[src] {
+    /* This will only target img elements that have a src attribute. */
+}
+
+img[src="https://source.unsplash.com/random/800x800/?dog"] {
+    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+    width: 400px;
+    height: 400px;
+    border: 5px solid red;
+}
+
+
+
+
+/*  */
+
+[class^='aus'] {
+    /* Classes are attributes too!
+      This will target any class that begins with 'aus':
+      class='austria'
+      class='australia'
+    */
+    margin-top: 20px;
+    padding-left: 10px;
+    color: blue;
+}
+
+
+[src$='.jpg'] {
+    /* This will target any src attribute that ends in '.jpg':
+    src='puppy.jpg'
+    src='kitten.jpg'
+    */
+    display: none;
+}
+
+[for*='ill'] {
+    /* This will target any for attribute that has 'ill' anywhere inside it:
+    for="bill"
+    for="jill"
+    for="silly"
+    for="ill"
+    */
+    border: 2px dotted green;
+}
+
+/*  */
+
+
+.assignment{
+    list-style: decimal;
+}

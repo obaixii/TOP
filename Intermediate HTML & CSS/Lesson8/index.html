@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Advanced Selectors</title>
+</head>
+<h4>Advanced Selectors in CSS</h4>
+<hr>
+<main class="parent">
+    <div class="child group1">
+        <div class="grand-child group1">
+            Group 1
+            <div>
+                child div of Group1
+            </div>
+        </div>
+    </div>
+    <div class="child group2">
+        <div class="grand-child group2">
+            Group 2
+            <div>
+                child div of Group2
+            </div>
+        </div>
+    </div>
+    <div class="child group3">
+        <div class="grand-child group3">
+            Group 3
+            <div>
+                child div of Group3
+            </div>
+        </div>
+    </div>
+</main>
+
+<hr>
+
+<section class="link-group">
+    <a href="#1">Anchor Tag</a>
+    <a href="#2">Anchor Tag - Unvisited</a>
+    <a href="#3">Anchor Tag - Visited</a>
+</section>
+<hr>
+
+<h4>Structural pseudo-classes:: nth Child</h4>
+<p>:root is generally the place where you will place your &apos;global&apos; CSS rules that you want available
+    everywhere - such
+    as your custom properties and CSS variables, or rules such as box-sizing: border-box;.
+
+</p>
+<p>:first-child and :last-child will match elements that are the first or last sibling.Similarly, :empty will match
+    elements that have no children at all, and :only-child will match elements that don;&apos;t have any
+    siblings.<br>For a more dynamic approach we can use :nth-child. This is a flexible pseudo-class with a few different
+    uses.
+</p>
+<ul>
+    <li class="myList">Child 1</li>
+    <li class="myList">Child 2</li>
+    <li class="myList">Child 3</li>
+    <li class="myList">Child 4</li>
+    <li class="myList">Child 5</li>
+    <li class="myList">Child 6</li>
+    <li class="myList">Child 7</li>
+    <li class="myList">Child 8</li>
+    <li class="myList">Child 9</li>
+    <li class="myList">Child 10</li>
+    <li class="myList">Child 11</li>
+    <li class="myList">Child 12</li>
+</ul>
+
+<hr>
+
+<h4>::before and ::after - Pseudo-elements</h4>
+<main>
+    <div class="emojify">Hello World!</div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element docs</a>
+</main>
+
+<hr>
+<h4>Attribute selectors</h4>
+<p>Attribute is anything in the opening tag of an HTML element - such as src='picture.jpg' or
+    href="www.theodinproject.com".</p>
+<ul>
+    Let’s look at some examples for basic usage.
+    <li>[attribute] - This general selector will select anything where the given attribute exists. Its value doesn’t
+        matter.</li>
+    <li>selector[attribute] - Optionally we can combine our attribute selectors with other types of selectors, such as
+        class or element selectors.</li>
+    <li>[attribute="value"] - To get really specific, we can use = to match a specific attribute with a specific value.
+    </li>
+
+    <img src="https://source.unsplash.com/random/200x200/?animal" alt="">
+    <img src="https://source.unsplash.com/random/200x200/?fish" alt="">
+    <img src="https://source.unsplash.com/random/800x800/?dog" alt="">
+</ul>
+<h4>Sometimes we need to be more general in how we access these attributes. For example, perhaps we’re only
+    interested in img elements where the src attribute’s value ends in .jpg. For cases like this we have some
+    attribute selectors that allow us to match a part of the attribute’s value. If you’ve ever come across regular
+    expressions before, these attributes use a similar syntax.</h4>
+
+<li>[attribute^="value"] - ^= Will match strings from the start.</li>
+<li>[attribute$="value"] - $= Will match strings from the end.</li>
+<li>[attribute*="value"] - *= The wildcard selector will match anywhere inside the string.</li>
+
+<main>
+    <div class="aus aus1">Australia</div>
+    <div class="aus aus2">Austria</div>
+    <div class="aus aus3">Australia vs Austria</div>
+</main>
+
+<form>
+    <input type="text" id="bill">
+    <label for="bill">Bill</label>
+
+    <input type="text" id="fill">
+    <label for="fill">Fill</label>
+</form>
+
+<hr>
+
+<h4>Assignment</h4>
+<ul class="assignment">
+    <li>Complete CSS Diner.</li>
+    <li>Read Shay Howe’s article on Complex Selectors.</li>
+</ul>
+
+<body>
+
+</body>
+
+</html>
